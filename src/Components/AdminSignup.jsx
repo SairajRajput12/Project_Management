@@ -27,7 +27,7 @@ export default function AdminSignup() {
         }
 
         try{
-          const response = await fetch('http://127.0.0.1:5000/adminsignup', {
+          const response = await fetch('https://project-management-backend-vp9y.onrender.com/adminsignup', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

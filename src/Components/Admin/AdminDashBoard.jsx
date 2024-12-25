@@ -26,7 +26,7 @@ export default function AdminDashBoard() {
     }
 
     // code to fetch the project data 
-    const url = 'http://127.0.0.1:5000/fetch_data'; 
+    const url = 'https://project-management-backend-vp9y.onrender.com/fetch_data'; 
     const username = localStorage.getItem('current_user'); 
 
     const fetch_Data = async () => {
@@ -74,7 +74,7 @@ export default function AdminDashBoard() {
     let project_name = projects[index].name;
     try {
       console.log('Sending data to backend', updatedProjects);
-      const response = await fetch('http://127.0.0.1:5000/update_project', {
+      const response = await fetch('https://project-management-backend-vp9y.onrender.com/update_project', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ export default function AdminDashBoard() {
     try {
       console.log('Sending data to backend', updatedProjects);
       
-      const response = await fetch('http://127.0.0.1:5000/add_projects', {
+      const response = await fetch('https://project-management-backend-vp9y.onrender.com/add_projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export default function AdminDashBoard() {
     let current_user = localStorage.getItem('current_user');
     try {
       console.log('Sending data to backend', updatedProjects);
-      const response = await fetch('http://127.0.0.1:5000/delete_project', {
+      const response = await fetch('https://project-management-backend-vp9y.onrender.com/delete_project', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -25,7 +25,7 @@ export default function ManagerDashBoard() {
 
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/fetch_manager_data', {
+        const response = await fetch('https://project-management-backend-vp9y.onrender.com/fetch_manager_data', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ user_name: localStorage.getItem('current_user') }),
@@ -58,7 +58,7 @@ export default function ManagerDashBoard() {
     );
   
     try {
-      const response = await fetch('http://127.0.0.1:5000/update_tasks', {
+      const response = await fetch('https://project-management-backend-vp9y.onrender.com/update_tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ index, task_data: updatedTasks, project_name: projectName }),

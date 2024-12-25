@@ -9,6 +9,7 @@
     display: flex; 
     flex-direction: row; 
     justify-content: center;
+    align-self: center;
 }
 
 .form-container{
@@ -17,9 +18,11 @@
     align-items: center; */
     border: 2px solid blue; 
     border-radius: 12px;
+    align-self: center;
 }
 
 dialog{
+    width: 30%; 
     border-radius: 12px;
     border: none;
     border-radius: 10px;

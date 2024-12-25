@@ -13,7 +13,7 @@ export default function UserProjects({ projects }) {
       let p_name = projects[index].name;
       try {
         console.log('Sending data to backend', userTasks);
-        const response = await fetch('http://127.0.0.1:5000/update_user_tasks', {
+        const response = await fetch('https://project-management-backend-vp9y.onrender.com/update_user_tasks', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

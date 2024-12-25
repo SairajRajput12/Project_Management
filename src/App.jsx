@@ -1,5 +1,5 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import './App.css'
 import NormalComponent from './Components/NormalComponent';
 import LoginForm from './Components/LoginForm';
 import AdminSignup from './Components/AdminSignup';
@@ -8,17 +8,20 @@ import AdminDashBoard from './Components/Admin/AdminDashBoard';
 import UserDashBoard from './Components/User/UserDashBoard';
 import ManagerDashBoard from './Components/Manager/ManagerDashBoard';
 
-const router = createBrowserRouter([
-  { path: '/', element: <NormalComponent /> },
-  { path: '/login', element: <LoginForm /> },
-  { path: '/admin', element: <AdminDashBoard /> },
-  { path: '/user', element: <UserDashBoard /> },
-  { path: '/manager', element: <ManagerDashBoard /> },
-  { path: '/signup', element: <SignupForm /> },
-]);
-
 function App() {
-  return <RouterProvider router={router} />;
+
+  return (
+    <HashRouter>
+        <Routes>
+            <Route path='/' element={<NormalComponent />} /> 
+            <Route path='/login' element={<LoginForm />} /> 
+            <Route path='/admin' element={<AdminDashBoard />} />
+            <Route path='/user' element={<UserDashBoard />} /> 
+            <Route path='/manager' element={<ManagerDashBoard />}  />
+            <Route path='/signup' element={<SignupForm />} />
+        </Routes>
+    </HashRouter>
+  )
 }
 
 export default App;

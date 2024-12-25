@@ -32,7 +32,7 @@ export default function UserDashBoard() {
       }
 
       // code to fetch the project data 
-      const url = 'http://127.0.0.1:5000/fetch_tasks'; 
+      const url = 'https://project-management-backend-vp9y.onrender.com/fetch_tasks'; 
       const fetch_Data = async () => {
         try{
           const response = await fetch(url,{
