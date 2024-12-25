@@ -28,6 +28,7 @@ export default function CreateProject({update_to_backend}) {
     setUserRole('');
   };
 
+  console.log(projectUsers); 
   
 
   const handleCreateProject = (e) => {
@@ -154,13 +155,13 @@ export default function CreateProject({update_to_backend}) {
           {projectUsers.map((user, index) => (
             <div key={index} className="user">
               <p>
-                <strong>Name:</strong> {user.Name}
+                <strong>Name:</strong> {user.username}
               </p>
               <p>
-                <strong>Email:</strong> {user.Email}
+                <strong>Email:</strong> {user.email}
               </p>
               <p>
-                <strong>Role:</strong> {user.Role}
+                <strong>Role:</strong> {user.role}
               </p>
             </div>
           ))}
