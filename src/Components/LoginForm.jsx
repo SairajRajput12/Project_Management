@@ -33,7 +33,6 @@ export default function LoginForm({ goBack,className }) {
         localStorage.setItem('level', result.level);
         setSuccessMessage(result.message);
 
-        // Redirect based on user role
         if (result.level === 'admin') {
           navigate('/admin');
         } else if (result.role === 'manager') {
@@ -45,7 +44,7 @@ export default function LoginForm({ goBack,className }) {
         setErrorMessage(result.message);
       }
     } catch (error) {
-      setIsSubmitting(false); // Reset submitting state
+      setIsSubmitting(false); 
       console.error('Error:', error);
     }
   };

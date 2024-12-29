@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Button from "../UI/Button";
 import FormSelection from "./FormSelection";
+import "./DialogWithUseRef.css"; 
 
 const DialogWithUseRef = () => {
   const dialogRef = useRef(null);
@@ -14,11 +15,13 @@ const DialogWithUseRef = () => {
   };
 
   return (
-    <div>
-      <Button className='user-button' onSubmit={openDialog}>Get Started</Button>
-      <dialog ref={dialogRef} aria-modal="true">
-        <FormSelection className='user-button' />
-        <Button className='user-button' onSubmit={closeDialog}>Close</Button>
+    <div className="dialog">
+      <Button className="user-button" onSubmit={openDialog}>Get Started</Button>
+      <dialog ref={dialogRef} className="dialog-box" aria-modal="true">
+        <div className="dialog-content">
+          <FormSelection className="form-selection" />
+          <Button className="user-button" onSubmit={closeDialog}>Close</Button>
+        </div>
       </dialog>
     </div>
   );

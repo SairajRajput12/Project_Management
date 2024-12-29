@@ -1,0 +1,50 @@
+.dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+  
+  .dialog-box {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    /* max-width: 90%; */
+    /* width: 400px;  */
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+  }
+  
+  .user-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .user-button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 600px) {
+    .dialog-box {
+      width: 90%;
+      padding: 16px;
+    }
+  
+    .user-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
