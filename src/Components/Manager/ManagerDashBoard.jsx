@@ -78,6 +78,11 @@ export default function ManagerDashBoard() {
     }
     return <ViewManagerProjects projects={projects} />;
   };
+  const userHandleSignout = () =>{
+    handleSignout(); 
+    navigate(-1); 
+  } 
+
 
   return (
     <DashBoard>
@@ -88,7 +93,7 @@ export default function ManagerDashBoard() {
         <Button onSubmit={() => setTab('view-projects')} className="project-button">
           View Projects
         </Button>
-        <Button className="project-button" onSubmit={handleSignout}>
+        <Button className="project-button" onSubmit={userHandleSignout}>
           Signout
         </Button>
       </SideBoard>

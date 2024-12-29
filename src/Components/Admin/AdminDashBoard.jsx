@@ -175,7 +175,10 @@ export default function AdminDashBoard() {
   else{
     content = <EditProject update_to_backend={update_to_backend} delete_project={delete_project} updateProjectByIndex={updateProjectByIndex} projects={projects} />
   }
-
+  const userHandleSignout = () =>{
+    handleSignout(); 
+    navigate(-1); 
+  } 
 
 
   return (
@@ -185,7 +188,7 @@ export default function AdminDashBoard() {
           <Button onSubmit = {() => changeState('create-project')} className="project-button">Create Project</Button>
           <Button onSubmit = {() => changeState('view-project')} className="project-button">View Project Status</Button>
           <Button onSubmit = {() => changeState('sairaj-is-best')} className="project-button">Edit Project</Button>
-          <Button className="project-button" onSubmit={handleSignout}>Signout</Button>
+          <Button className="project-button" onSubmit={userHandleSignout}>Signout</Button>
         </SideBoard>
         <ViewBoard>
             {content}

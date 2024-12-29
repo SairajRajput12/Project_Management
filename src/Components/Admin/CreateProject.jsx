@@ -42,9 +42,9 @@ export default function CreateProject({update_to_backend}) {
     let manager = null; 
     let manager_mail = null; 
     for (let i = 0; i < projectUsers.length; i++) {
-      if (projectUsers[i].Role.toLowerCase() === 'manager') { // Access the Role of the user object
-        manager = projectUsers[i].Name; // Access the Name of the manager
-        manager_mail = projectUsers[i].Email;
+      if (projectUsers[i].role.toLowerCase() === 'manager') { // Access the Role of the user object
+        manager = projectUsers[i].username; // Access the Name of the manager
+        manager_mail = projectUsers[i].email;
         break; 
       }
     }

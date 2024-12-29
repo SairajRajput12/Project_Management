@@ -69,13 +69,19 @@ export default function UserDashBoard() {
         content =  <ViewUserProjects projects={projects} />
     }
 
+    const userHandleSignout = () =>{
+      handleSignout(); 
+      navigate(-1); 
+    } 
+  
+
 
   return (
     <DashBoard>
         <SideBoard>
           <Button onSubmit={() => setTab('user-projects')} className="project-button">Your Projects</Button>
           <Button onSubmit={() => setTab('sairaj-is-best')} className="project-button">View Projects</Button>
-          <Button className="project-button" onSubmit={handleSignout}>Signout</Button>
+          <Button className="project-button" onSubmit={userHandleSignout}>Signout</Button>
         </SideBoard>
         <ViewBoard>
             {content}
