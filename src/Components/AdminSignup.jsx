@@ -3,7 +3,7 @@ import Form from '../UI/Form';
 import '../Components/SignupForm.css';
 import Button from '../UI/Button';
 
-export default function AdminSignup() {
+export default function AdminSignup({className}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -79,7 +79,7 @@ export default function AdminSignup() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <Button onSubmit={SubmitForm} className='submit-button'>Signup</Button>
+          <Button onSubmit={SubmitForm} className={className}>Signup</Button>
       </Form>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}

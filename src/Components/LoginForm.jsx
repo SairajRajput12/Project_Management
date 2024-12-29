@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import '../Components/SignupForm.css';
 import Button from '../UI/Button';
 
-export default function LoginForm({ goBack }) {
+export default function LoginForm({ goBack,className }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -70,7 +70,7 @@ export default function LoginForm({ goBack }) {
           disabled={isSubmitting} // Disable input while submitting
         />
 
-        <Button className="submit-button" disabled={isSubmitting}>
+        <Button className={className} disabled={isSubmitting}>
           {isSubmitting ? 'Logging in...' : 'Login'}
         </Button>
       </form>

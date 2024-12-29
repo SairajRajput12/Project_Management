@@ -3,7 +3,7 @@ import Form from '../UI/Form';
 import '../Components/SignupForm.css';
 import Button from '../UI/Button';
 
-export default function SignupForm() {
+export default function SignupForm({className}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -90,7 +90,7 @@ export default function SignupForm() {
           onChange={(e) => setRole(e.target.value)}
         />
         
-        <Button type='submit' className='submit-button'>
+        <Button type='submit' className={className}>
           Signup
         </Button>
       </Form>

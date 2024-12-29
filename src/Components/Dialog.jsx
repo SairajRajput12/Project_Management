@@ -17,7 +17,7 @@ const DialogWithUseRef = () => {
     <div>
       <Button className='user-button' onSubmit={openDialog}>Get Started</Button>
       <dialog ref={dialogRef} aria-modal="true">
-        <FormSelection />
+        <FormSelection className='user-button' />
         <Button className='user-button' onSubmit={closeDialog}>Close</Button>
       </dialog>
     </div>

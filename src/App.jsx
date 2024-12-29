@@ -7,11 +7,14 @@ import SignupForm from './Components/SingupForm';
 import AdminDashBoard from './Components/Admin/AdminDashBoard';
 import UserDashBoard from './Components/User/UserDashBoard';
 import ManagerDashBoard from './Components/Manager/ManagerDashBoard';
+import Navbar from './Components/Navbar';
 
 function App() {
 
   return (
-    <HashRouter>
+    <>
+      <Navbar />
+      <HashRouter>
         <Routes>
             <Route path='/' element={<NormalComponent />} /> 
             <Route path='/login' element={<LoginForm />} /> 
@@ -20,7 +23,8 @@ function App() {
             <Route path='/manager' element={<ManagerDashBoard />}  />
             <Route path='/signup' element={<SignupForm />} />
         </Routes>
-    </HashRouter>
+      </HashRouter>
+    </>
   )
 }
 

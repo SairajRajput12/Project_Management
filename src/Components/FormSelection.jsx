@@ -5,17 +5,17 @@ import LoginForm from './LoginForm';
 import SingupForm from './SingupForm';
 import '../Components/FormSelection.css'
 
-function FormSelection() {
+function FormSelection({className}) {
     const [activeComponent,changeState] = useState('login')
     let content = null; // Default content to null
     console.log(content);
     if (activeComponent) {
       if (activeComponent === 'login') {
-        content = <LoginForm />; // Fixed component name
+        content = <LoginForm className={className} />; // Fixed component name
       } else if (activeComponent === 'adminSignup') {
-        content = <AdminSignup />;
+        content = <AdminSignup className={className} />;
       } else if (activeComponent === 'userSignup') {
-        content = <SingupForm />; // Fixed component name
+        content = <SingupForm  className={className}/>; // Fixed component name
       }
     }
 
@@ -24,13 +24,13 @@ function FormSelection() {
     <h1>Welcome to our website</h1>
     <div className='form-select'>
       <div className="button-container">
-        <Button className='sample' onSubmit={() => changeState('adminSignup')}>
+        <Button className={className} onSubmit={() => changeState('adminSignup')}>
           Admin Signup Form
         </Button>
-        <Button className='sample' onSubmit={() => changeState('userSignup')}>
+        <Button className={className} onSubmit={() => changeState('userSignup')}>
           User Signup Form
         </Button>
-        <Button className='sample' onSubmit={() => changeState('login')}>
+        <Button className={className} onSubmit={() => changeState('login')}>
           Login Form
         </Button>
       </div>
