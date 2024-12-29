@@ -49,20 +49,30 @@ body{
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   body, .homepage {
       display: flex; 
       flex-direction: column;
   }
 
-  .homepage{
-    align-items: flex-start;
-    justify-items: flex-end;
+  .image{
+    width: 150px; 
+    height: 150px;
   }
 
-  .homepage img{
-    width: 450px; 
-    height: 350px;
+  .homepage{
+    margin: 0px; 
+    padding: 0px;
+    background-color: black;
+  }
+
+  .right-description{
+    width: 100%;
   }
   
+  .homepage{
+    width: 100%;
+  }
+
+
 }
