@@ -23,13 +23,13 @@ function FormSelection({ className }) {
       <div className="form-select">
         <div className="button-container">
           <Button className={className} onSubmit={() => changeState('adminSignup')}>
-            Admin Signup Form
+            Admin Signup
           </Button>
           <Button className={className} onSubmit={() => changeState('userSignup')}>
-            User Signup Form
+            User Signup
           </Button>
           <Button className={className} onSubmit={() => changeState('login')}>
-            Login Form
+            Login
           </Button>
         </div>
         <div className="form-container">{content}</div>

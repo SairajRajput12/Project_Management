@@ -73,7 +73,7 @@ export default function ManagerProjects({ projects, updateProjectViaIndex }) {
           <p className={`status ${project.ProjectStatus.toLowerCase()}`}>{project.ProjectStatus}</p>
         </label>
         <label>Assigned Date: {project.Starting_Date}</label>
-        <Button className='edit-project-button' onSubmit={() => handleSelectProject(idx)}>Edit Project</Button>
+        <Button className='user-button' onSubmit={() => handleSelectProject(idx)}>Edit Project</Button>
       </div>
     ));
   };
