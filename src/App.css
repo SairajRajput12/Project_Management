@@ -63,7 +63,7 @@ body{
   .homepage{
     margin: 0px; 
     padding: 0px;
-    background-color: black;
+    /* background-color: black; */
   }
 
   .right-description{
@@ -74,6 +74,10 @@ body{
     width: 100%;
   }
 
+  .dialog-box{
+    max-width: 90%;
+    width: 400px; 
+  }
 
 
 }
